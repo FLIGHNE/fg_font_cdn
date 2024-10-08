@@ -1,0 +1,32 @@
+@font-face {
+    /* Test */
+    font-family: 'fg-font';
+    src:  url('https://www.fgofficial.infinityfreeapp.com/FG_FEMICON_FONT/fonts/font_fg.eot?2kf6hc');
+    src:  url('https://www.fgofficial.infinityfreeapp.com/FG_FEMICON_FONT/fonts/font_fg.eot?2kf6hc#iefix') format('embedded-opentype'),
+      url('https://www.fgofficial.infinityfreeapp.com/FG_FEMICON_FONT/fonts/font_fg.ttf?2kf6hc') format('truetype'),
+      url('https://www.fgofficial.infinityfreeapp.com/FG_FEMICON_FONT/fonts/font_fg.woff?2kf6hc') format('woff'),
+      url('https://www.fgofficial.infinityfreeapp.com/FG_FEMICON_FONT/fonts/font_fg.svg?2kf6hc#font_fg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'fg-font' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-fg-info-filled:before {
+    content: "\e901";
+  }
+  .icon-fg-info-solid:before {
+    content: "\e900";
+  }
