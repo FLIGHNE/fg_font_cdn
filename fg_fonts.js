@@ -1,1 +1,43 @@
-(function(_0x4bff9a,_0x121d26){const _0x230f96=_0x4cfd,_0x532387=_0x4bff9a();while(!![]){try{const _0x1abb0b=parseInt(_0x230f96(0x109))/0x1*(parseInt(_0x230f96(0x103))/0x2)+parseInt(_0x230f96(0x110))/0x3+parseInt(_0x230f96(0x11c))/0x4*(-parseInt(_0x230f96(0x11e))/0x5)+parseInt(_0x230f96(0x11b))/0x6+parseInt(_0x230f96(0x10f))/0x7+-parseInt(_0x230f96(0x113))/0x8*(-parseInt(_0x230f96(0x122))/0x9)+-parseInt(_0x230f96(0x117))/0xa;if(_0x1abb0b===_0x121d26)break;else _0x532387['push'](_0x532387['shift']());}catch(_0x1ca5ae){_0x532387['push'](_0x532387['shift']());}}}(_0x5175,0xa0232));function loadCSS(){const _0x187759=_0x4cfd,_0x1f007f=(function(){let _0x2ecec0=!![];return function(_0x2dc989,_0x34f178){const _0x1cf067=_0x2ecec0?function(){if(_0x34f178){const _0x59ee54=_0x34f178['apply'](_0x2dc989,arguments);return _0x34f178=null,_0x59ee54;}}:function(){};return _0x2ecec0=![],_0x1cf067;};}()),_0x529bff=_0x1f007f(this,function(){const _0x2bf8e3=_0x4cfd;return _0x529bff[_0x2bf8e3(0x10e)]()['search']('(((.+)+)+)+$')['toString']()[_0x2bf8e3(0x120)](_0x529bff)[_0x2bf8e3(0x116)]('(((.+)+)+)+$');});_0x529bff();const _0xe96cc2=document[_0x187759(0x10a)](_0x187759(0x114));let _0x310e07='';for(let _0x2e82ea=0x0;_0x2e82ea<_0xe96cc2[_0x187759(0x106)];_0x2e82ea++){if(_0xe96cc2[_0x2e82ea][_0x187759(0x102)][_0x187759(0x107)](_0x187759(0x104))){const _0x3ffe37=new URLSearchParams(_0xe96cc2[_0x2e82ea]['src'][_0x187759(0x121)]('?')[0x1]);_0x310e07=_0x3ffe37[_0x187759(0x10d)]('api_key');break;}}if(!_0x310e07){console[_0x187759(0x115)](_0x187759(0x10b)),alert(_0x187759(0x111));return;}fetch('https://www.fgofficial.infinityfreeapp.com/fg_fonts?api_key='+_0x310e07,{'mode':_0x187759(0x11f)})[_0x187759(0x119)](_0x3f879e=>{const _0x36f8f2=_0x187759;if(_0x3f879e['ok'])return _0x3f879e[_0x36f8f2(0x11d)]();else throw new Error('Failed\x20to\x20validate\x20API\x20key.');})['then'](_0x27be5c=>{const _0x324fbb=_0x187759,_0x159999=document[_0x324fbb(0x101)](_0x324fbb(0x10c));_0x159999['innerHTML']=_0x27be5c,document['head'][_0x324fbb(0x118)](_0x159999);})[_0x187759(0x112)](_0x2dc480=>{const _0x4afaf6=_0x187759;console['error'](_0x4afaf6(0x108),_0x2dc480),alert(_0x4afaf6(0x11a)+_0x2dc480[_0x4afaf6(0x105)]);});}function _0x4cfd(_0x10ce92,_0x55cee4){const _0x23b594=_0x5175();return _0x4cfd=function(_0x5ccebd,_0x5122d1){_0x5ccebd=_0x5ccebd-0x101;let _0x51757d=_0x23b594[_0x5ccebd];return _0x51757d;},_0x4cfd(_0x10ce92,_0x55cee4);}loadCSS();function _0x5175(){const _0x2dc297=['fg_fonts.js','message','length','includes','Error:','287uKhTgy','getElementsByTagName','API\x20key\x20not\x20found\x20in\x20the\x20script\x20URL.','style','get','toString','7787647BOAlPs','1224387fWJRzX','API\x20key\x20not\x20found.\x20Please\x20provide\x20a\x20valid\x20API\x20key\x20in\x20the\x20script\x20URL.','catch','16RGtQaY','script','error','search','24565740dQVQMz','appendChild','then','Could\x20not\x20validate\x20API\x20key:\x20','6476838uSHUdY','656XjBZRQ','text','23535dSrPvY','no-cors','constructor','split','973773BZJwdP','createElement','src','7442qzekyr'];_0x5175=function(){return _0x2dc297;};return _0x5175();}
+function loadCSS() {
+    // Get the script's URL to extract the API key
+    const scripts = document.getElementsByTagName('script');
+    let apiKey = '';
+
+    // Loop through all scripts to find the one with the specific src
+    for (let i = 0; i < scripts.length; i++) {
+        if (scripts[i].src.includes('fg_fonts.js')) {
+            const urlParams = new URLSearchParams(scripts[i].src.split('?')[1]);
+            apiKey = urlParams.get('api_key'); // Use 'api_key' to match the correct parameter name
+            break;
+        }
+    }
+
+    // Check if the API key is present
+    if (!apiKey) {
+        console.error('API key not found in the script URL.');
+        alert('API key not found. Please provide a valid API key in the script URL.');
+        return;
+    }
+
+    fetch(`https://www.fgofficial.infinityfreeapp.com/fg_fonts?api_key=${apiKey}`, { mode: 'no-cors' })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Failed to validate API key.');
+            }
+        })
+        .then(cssContent => {
+            // Load the CSS if authorized
+            const styleElement = document.createElement('style');
+            styleElement.innerHTML = cssContent;
+            document.head.appendChild(styleElement);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Could not validate API key: ' + error.message);
+        });
+}
+
+// Attempt to load CSS with the API key from the script URL
+loadCSS();
