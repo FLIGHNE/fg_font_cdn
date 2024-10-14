@@ -1,5 +1,5 @@
 @font-face {
-/* ADDED CC */
+/* Added Lockdot 10/14/24 */
   font-family: 'fg-font';
   src:  url('https://cdn.jsdelivr.net/gh/FLIGHNE/fg_font_cdn/FG_FEMICON_FONT/fonts/font_fg.eot?2kf6hc');
   src:  url('https://cdn.jsdelivr.net/gh/FLIGHNE/fg_font_cdn/FG_FEMICON_FONT/fonts/font_fg.eot?2kf6hc#iefix') format('embedded-opentype'),
@@ -31,6 +31,9 @@
 }
 .icon-fg-info-filled:before {
   content: "\e901";
+}
+.icon-fg-lockdot-filled:before {
+  content: "\e903";
 }
 .icon-fg-info-solid:before {
   content: "\e900";
