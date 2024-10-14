@@ -7,9 +7,9 @@ The **FEMICON** API Allows user to use our SVG icons and logo as FONTS
 ### CDN Support
 We have our CDN at [jsdeliver](https://cdn.jsdelivr.net/gh/FLIGHNE/fg_font_cdn/) an Free Open Source CDN for **FLIGHNE/fg_font_cdn**
 
- - [x] FEMICON.v1 CDN
- - [x] FEMICON Github Source.v1
- - [ ] CloudFlare CDN `Comming Soon`
+ - [x] - FEMICON.v1 CDN
+ - [x] - FEMICON Github Source.v1
+ - [ ] - CloudFlare CDN `Comming Soon`
 
  
  
